@@ -1,0 +1,39 @@
+@import "index.less";
+
+.sidebar-video {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.sidebar {
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  width: 50%;
+  height: 100vh;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  background-color: #000;
+
+  transform-origin: 0 0;
+  transform: scale( 0.1 );
+
+  .transition;
+
+  will-change: opacity;
+
+  //&:hover,
+  .active--aside & {
+    transform: scale( 1 ) !important;
+  }
+
+  &.scaled-up {
+    height: 100vh !important;
+  }
+}

@@ -1,0 +1,73 @@
+@import "index.less";
+
+.contact-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  color: black;
+  display: block;
+  margin: 1rem 1rem;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+}
+
+.white {
+  color: white;
+  border: 1px solid white;
+}
+
+.contact-bar {
+  position: fixed;
+  right: 0;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  background-color: black;
+  border-right: 1px solid currentColor;
+
+  direction: rtl;
+
+  transform: translateX( 100% );
+
+  .transition;
+
+  & > * {
+    direction: ltr;
+  }
+
+  &::before {
+    content: ' ';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    display: block;
+    width: 14vw;
+    height: 7.5vw;
+    margin: 3rem auto;
+  }
+
+  .visible--nav & {
+    transform: translateX( 0 );
+  }
+}
+
+
+@media screen and ( min-width: 1400px ) {
+    .nav--sitemap {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+}
+
+
+
